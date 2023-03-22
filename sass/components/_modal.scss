@@ -1,0 +1,191 @@
+@import "../utils/vars";
+
+.is-hidden {
+ visibility: hidden;
+ opacity: 0;
+}
+.modal {
+ background: rgba(0, 0, 0, 0.2);
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ z-index: 10;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: opacity 250ms linear;
+ &__inside {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: $whitecolor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+ }
+ &__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  background: $whitecolor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill $defaultTransition;
+ }
+ &__button:hover {
+  fill: $bluecolor;
+  cursor: pointer;
+ }
+}
+.formular-modal {
+ display: flex;
+ flex-direction: column;
+ font-family: "Roboto";
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ letter-spacing: 0.01em;
+ color: $greycolor;
+ gap: 10px;
+ justify-content: center;
+ align-items: center;
+ padding: 40px;
+
+ &__title {
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $blackcolor;
+  margin-top: -5px;
+ }
+ &__input {
+  box-sizing: border-box;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 40px;
+  outline: none;
+  transition: border $defaultTransition;
+ }
+
+ &__input:focus,
+ &__input:hover {
+  border: 2px solid $bluecolor;
+  cursor: pointer;
+ }
+ &__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: fill $defaultTransition;
+ }
+ &__label:hover {
+  fill: $bluecolor;
+  cursor: pointer;
+ }
+ &__feedback {
+  box-sizing: border-box;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
+  outline: none;
+  transition: border $defaultTransition;
+ }
+
+ &__feedback:focus,
+ &__feedback:hover {
+  border: 2px solid $bluecolor;
+  cursor: pointer;
+ }
+ &__svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+ }
+ &__replace {
+  width: 16px;
+  height: 15px;
+  border: 2px solid $blackcolor;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ &__checkbox {
+  display: none;
+ }
+ &__button {
+  width: 200px;
+  height: 50px;
+  background: $bluesecond;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: $whitecolor;
+  border: none;
+  transition: background $defaultTransition;
+ }
+ &__button:focus,
+ &__button:hover {
+  background: $bluecolor;
+  cursor: pointer;
+ }
+}
+.terms {
+ flex-direction: row;
+ gap: 8px;
+ justify-content: center;
+ align-items: center;
+ margin-top: 10px;
+ margin-bottom: 20px;
+ font-size: 14px;
+ line-height: 24px;
+ letter-spacing: 0.03em;
+ color: $greycolor;
+ svg {
+  width: 16px;
+  height: 16px;
+  position: static;
+  opacity: 0;
+  fill: $whitecolor;
+ }
+}
+.condition {
+ color: $bluecolor;
+}
+
+.formular-modal input[type="checkbox"]:checked + .formular-modal__replace svg {
+ opacity: 1;
+}
+.formular-modal input[type="checkbox"]:checked + .formular-modal__replace {
+ background: $bluecolor;
+ border: $bluecolor;
+}

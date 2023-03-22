@@ -1,0 +1,39 @@
+@import "../utils/vars";
+
+.customers {
+ display: flex;
+ height: 184;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 94px 0;
+
+ &__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding-top: -44px;
+ }
+ &__item {
+  display: flex;
+  box-sizing: border-box;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $iconGrey;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  transition: border-color $defaultTransition, fill $defaultTransition;
+ }
+ &__item:hover {
+  border-color: $bluecolor;
+  fill: $bluecolor;
+  cursor: pointer;
+ }
+ &__svg:hover {
+  border-color: $bluecolor;
+  fill: $bluecolor;
+  cursor: pointer;
+ }
+}

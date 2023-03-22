@@ -1,0 +1,93 @@
+@import "../utils/vars";
+.container-team {
+ box-sizing: border-box;
+ width: 100%;
+ padding: 94px 0px;
+ background-color: $whitegreycolor;
+}
+.team {
+ &__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: &black;
+  margin: 0px 0px 50px 0px;
+ }
+ &__list {
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+ }
+ &__item {
+  box-sizing: border-box;
+  width: 270px;
+  height: 428px;
+  left: 215px;
+  top: 1635px;
+  background: $whitecolor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+ }
+
+ &__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $blackcolor;
+ }
+
+ &__job {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $greycolor;
+ }
+}
+
+.social-media {
+ display: flex;
+ padding-top: 16px;
+ &__item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color $defaultTransition;
+ }
+ &__item:hover,
+ &__item:focus {
+  cursor: pointer;
+  background-color: $bluecolor;
+ }
+ &__svg {
+  transition: fill $defaultTransition;
+ }
+ &__svg:hover,
+ &__svg:focus {
+  fill: $whitecolor;
+  cursor: pointer;
+ }
+}
+.social-media ul {
+ display: flex;
+ gap: 10px;
+}
+.social-media__item a {
+ display: flex;
+ color: $iconGrey;
+}
+
+.social-media__item svg {
+ fill: currentColor;
+}

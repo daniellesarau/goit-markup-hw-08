@@ -1,0 +1,161 @@
+@import "../utils/vars";
+.footer {
+ max-width: 1600px;
+ margin: 0 auto;
+ background-color: $backgroundGrey;
+}
+.footer-container {
+ display: flex;
+ align-items: center;
+ width: 1200px;
+ margin: 0 auto;
+ gap: 93px;
+}
+.contact-footer {
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ gap: 28px;
+ padding: 60px 0px 60px 0px;
+ &__logo {
+  margin: 0px;
+ }
+ &__title {
+  font-family: "Raleway";
+  font-style: normal;
+  line-height: 31px;
+  font-size: 26px;
+  text-decoration: none;
+  color: $bluecolor;
+ }
+ &__title2 {
+  color: $whitecolor;
+ }
+}
+.address {
+ margin: 0px;
+ padding: 0px;
+ &__item {
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $defaultTransition;
+ }
+ &__item:hover {
+  color: $bluecolor;
+  cursor: pointer;
+ }
+}
+.svg-footer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ &__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $whitecolor;
+  margin-top: 0px;
+  padding-right: 80px;
+ }
+}
+.footer-list {
+ display: flex;
+ gap: 10px;
+ margin-top: 0px;
+
+ &__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: $whitecolor;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition-property: background-color $defaultTransition;
+ }
+ &__item:hover {
+  cursor: pointer;
+  background-color: $bluecolor;
+ }
+}
+.formular-footer {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-top: -35px;
+
+ &__input {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $backgroundGrey;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 16px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border $defaultTransition;
+ }
+ &__input:hover,
+ &__input:focus {
+  border: 2px solid $bluesecond;
+ }
+ &__button {
+  width: 200px;
+  height: 50px;
+  margin-left: 0px;
+  background: $bluesecond;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $whitecolor;
+  border: none;
+  transition: background $defaultTransition;
+ }
+ &__button:hover,
+ &__button:focus {
+  background: $bluesecond;
+ }
+ &__svg {
+  padding-left: 25px;
+  align-items: center;
+  justify-content: center;
+ }
+ &__subscribe {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $whitecolor;
+  padding-right: 69px;
+ }
+}

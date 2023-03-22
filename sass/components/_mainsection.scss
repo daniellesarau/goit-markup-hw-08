@@ -1,0 +1,52 @@
+@import "../utils/vars";
+.container-main {
+ background-image: url(..//images/backgroundimage.jpg);
+ background-color: $greycolor;
+ background-blend-mode: multiply;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-attachment: scroll;
+ object-fit: cover;
+}
+
+.hero {
+ box-sizing: border-box;
+ width: 100%;
+ height: 600px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ &__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $whitecolor;
+  margin: 0px;
+  padding-top: 200px;
+  margin-bottom: 30px;
+ }
+ &__button {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  background: $bluecolor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $whitecolor;
+  padding: 10px 19px 10px 20px;
+  border: none;
+ }
+ &__button:hover,
+ &__button:focus {
+  background: $bluesecond;
+ }
+}

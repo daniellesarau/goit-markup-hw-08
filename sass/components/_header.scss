@@ -1,0 +1,94 @@
+@import "../utils/vars";
+.head-container {
+ border-bottom: 1px solid $white2color;
+}
+
+.container-header {
+ background: $whitecolor;
+ justify-content: center;
+ align-items: center;
+}
+.header {
+ display: flex;
+ align-items: center;
+
+ &__logo {
+  margin: 24px 93px 25px 15px;
+ }
+ &__title {
+  font-family: "Raleway";
+  font-style: normal;
+  line-height: 31px;
+  font-size: 26px;
+  text-decoration: none;
+  color: $bluecolor;
+ }
+ &__title2 {
+  color: $blackcolor;
+ }
+}
+.navigation-list {
+ display: flex;
+ align-items: center;
+ gap: 50px;
+ padding: 0;
+ &__item {
+  color: $blackcolor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color $defaultTransition;
+ }
+
+ &__item:hover,
+ &__item:focus {
+  color: $bluecolor;
+ }
+}
+.navigation-list__item.active-link {
+ position: relative;
+}
+.navigation-list__item.active-link::after {
+ content: "";
+ border: 2px solid #2196f3;
+ width: 100%;
+ position: absolute;
+ bottom: -23px;
+ border-radius: 4px;
+ visibility: hidden;
+ left: 0;
+}
+
+.navigation-list__item.active-link::after {
+ visibility: visible;
+}
+.right-navigation-list {
+ display: flex;
+ gap: 40px;
+ margin: 0px 0px 0px auto;
+ padding: 0;
+ align-items: center;
+ justify-content: center;
+
+ &__item {
+  color: $greycolor;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+ }
+ &__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color $defaultTransition;
+ }
+ &__icon a:hover {
+  color: $bluecolor;
+  stroke: $bluecolor;
+ }
+}

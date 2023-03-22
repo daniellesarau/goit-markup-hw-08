@@ -1,0 +1,45 @@
+@import "../utils/vars";
+
+.job {
+ &__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $blackcolor;
+  margin: 0px 0px 50px 0px;
+ }
+
+ &__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 30px;
+  margin: 0px;
+  padding-bottom: 94px;
+ }
+ &__list li {
+  position: relative;
+ }
+
+ &__apps {
+  position: absolute;
+  top: 224px;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(47, 48, 58, 0.8);
+  z-index: 11;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $whitecolor;
+ }
+}
