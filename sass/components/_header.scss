@@ -1,94 +1,133 @@
 @import "../utils/vars";
-.head-container {
+
+.section-header {
+ background-color: $whitecolor;
+ padding-bottom: 0;
+ padding-top: 0;
  border-bottom: 1px solid $white2color;
 }
-
-.container-header {
- background: $whitecolor;
- justify-content: center;
- align-items: center;
+.logo-container {
+ @media screen and (min-width: 0px) and (max-width: 767px) {
+  margin-top: 16px;
+  margin-right: 200px;
+  margin-bottom: 16px;
+ }
 }
-.header {
+.site-nav {
  display: flex;
  align-items: center;
+ justify-content: center;
+ height: 80px;
 
  &__logo {
-  margin: 24px 93px 25px 15px;
- }
- &__title {
-  font-family: "Raleway";
+  font-family: Raleway;
   font-style: normal;
-  line-height: 31px;
+  font-weight: bold;
   font-size: 26px;
+  line-height: 1.2;
   text-decoration: none;
   color: $bluecolor;
  }
- &__title2 {
+ &__logo--color-modify {
   color: $blackcolor;
  }
 }
-.navigation-list {
+.nav-menu {
  display: flex;
- align-items: center;
+ color: $blackcolor;
+ font-weight: 500;
+ font-size: 16px;
+ line-height: 1.6;
+ margin-left: 93px;
+ text-decoration: none;
  gap: 50px;
- padding: 0;
+
  &__item {
-  color: $blackcolor;
+  position: relative;
+ }
+
+ &__link {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142;
   letter-spacing: 0.02em;
+  color: $blackcolor;
+  text-decoration: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  transition: color $defaultTransition;
+  list-style: none;
+ }
+
+ &__link:hover,
+ &__link:active,
+ &__link:focus {
+  color: $bluecolor;
+ }
+
+ &__link--current {
+  color: $bluecolor;
+ }
+
+ &__link--current::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $bluecolor;
+ }
+}
+.contact-list {
+ display: flex;
+ margin-left: auto;
+ text-decoration: none;
+ gap: 10px;
+ @media screen and (min-width: 768px) and (max-width: 1199px) {
+  flex-direction: column;
+ }
+ @media screen and (min-width: 1200px) {
+  gap: 40px;
+ }
+ &__item {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  list-style: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
+ }
+
+ &__link {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: $greycolor;
   text-decoration: none;
   transition: color $defaultTransition;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+   padding: 0px;
+   margin: 0px;
+  }
  }
 
- &__item:hover,
- &__item:focus {
+ &__link:hover,
+ &__link:focus {
   color: $bluecolor;
- }
-}
-.navigation-list__item.active-link {
- position: relative;
-}
-.navigation-list__item.active-link::after {
- content: "";
- border: 2px solid #2196f3;
- width: 100%;
- position: absolute;
- bottom: -23px;
- border-radius: 4px;
- visibility: hidden;
- left: 0;
-}
-
-.navigation-list__item.active-link::after {
- visibility: visible;
-}
-.right-navigation-list {
- display: flex;
- gap: 40px;
- margin: 0px 0px 0px auto;
- padding: 0;
- align-items: center;
- justify-content: center;
-
- &__item {
-  color: $greycolor;
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
  }
  &__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: color $defaultTransition;
- }
- &__icon a:hover {
-  color: $bluecolor;
-  stroke: $bluecolor;
+  margin-right: 10px;
+  fill: currentColor;
  }
 }

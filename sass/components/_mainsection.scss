@@ -1,32 +1,78 @@
 @import "../utils/vars";
 .container-main {
- background-image: url(..//images/backgroundimage.jpg);
- background-color: $greycolor;
- background-blend-mode: multiply;
- background-position: center;
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/background\ m480.jpg);
+ padding-top: 0;
+ padding-bottom: 0;
+
+ background-size: cover;
  background-repeat: no-repeat;
- background-attachment: scroll;
- object-fit: cover;
+ background-position: center;
+ height: 400px;
+}
+@media screen and (min-width: 768px) {
+ .container-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/background\ T768.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+}
+@media screen and (min-width: 1200px) {
+ .container-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/background\ D1200.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+ }
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+ .container-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background\ M@2.jpg");
+ }
 }
 
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+ .container-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background\ T@2.jpg");
+ }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+ .container-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background\ D@2.jpg");
+ }
+}
 .hero {
  box-sizing: border-box;
  width: 100%;
- height: 600px;
+ text-align: center;
+ padding-top: 118px;
+ padding-bottom: 128px;
  display: flex;
  flex-direction: column;
  align-items: center;
+ @media screen and (min-width: 1200px) {
+  padding-top: 200px;
+  padding-bottom: 200px;
+ }
  &__title {
+  color: $whitecolor;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 60px;
+  font-size: 26px;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: $whitecolor;
-  margin: 0px;
-  padding-top: 200px;
   margin-bottom: 30px;
+  justify-content: center;
+ }
+
+ @media screen and (min-width: 1200px) {
+  &__title {
+   font-size: 44px;
+   line-height: 1.36;
+  }
  }
  &__button {
   font-family: "Roboto";

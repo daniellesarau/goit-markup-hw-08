@@ -1,37 +1,72 @@
 @import "../utils/vars";
-.objectives-list {
- display: flex;
- align-items: center;
- justify-content: space-between;
- gap: 30px;
- margin: 0px;
- padding: 94px 0px;
 
- &__item {
+.objectives-section {
+ padding-top: 60px;
+ padding-bottom: 60px;
+ @media screen and (min-width: 1200px) {
+  padding-top: 94px;
+  padding-bottom: 94px;
+ }
+}
+
+.objectives-container {
+ display: flex;
+}
+.objectives-list {
+ margin-bottom: -30px;
+ gap: 30px;
+ @media screen and (min-width: 768px) {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ &__items {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+   width: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+   width: calc(100% / 4 - 30px);
+  }
+ }
+ &__icon {
+  max-width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background: $whitegreycolor;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ &__title {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: $blackcolor;
-  margin: 0px;
- }
+  margin-bottom: 10px;
 
+  @media screen and (max-width: 767px) {
+   display: flex;
+   justify-content: center;
+  }
+
+  @media screen and (min-width: 1199px) {
+   display: flex;
+   text-align: start;
+  }
+ }
  &__explication {
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: $greycolor;
-  margin: 10px 0px 0px 0px;
- }
-
- &__icon {
-  display: flex;
-  margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
-  background: $whitegreycolor;
-  border-radius: 4px;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+   max-width: 270px;
+  }
  }
 }

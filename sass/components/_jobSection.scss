@@ -1,5 +1,10 @@
 @import "../utils/vars";
-
+.section-job {
+ padding-bottom: 94px;
+ @media screen and (max-width: 1199px) {
+  display: none;
+ }
+}
 .job {
  &__title {
   text-align: center;
@@ -18,7 +23,6 @@
   padding: 0px;
   gap: 30px;
   margin: 0px;
-  padding-bottom: 94px;
  }
  &__list li {
   position: relative;

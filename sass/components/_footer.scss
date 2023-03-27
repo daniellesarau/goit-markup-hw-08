@@ -1,161 +1,296 @@
 @import "../utils/vars";
 .footer {
- max-width: 1600px;
- margin: 0 auto;
  background-color: $backgroundGrey;
+ padding-top: 60px;
+ padding-bottom: 60px;
 }
-.footer-container {
- display: flex;
- align-items: center;
- width: 1200px;
- margin: 0 auto;
- gap: 93px;
+
+@media screen and (min-width: 1200px) {
+ .footer-container {
+  display: flex;
+ }
+}
+
+@media screen and (min-width: 768px) {
+ .contact-footer {
+  display: inline-block;
+ }
+}
+@media screen and (min-width: 1200px) {
+ .contact-footer {
+  display: block;
+ }
 }
 .contact-footer {
- box-sizing: border-box;
- display: flex;
- flex-direction: column;
- justify-content: space-around;
- gap: 28px;
- padding: 60px 0px 60px 0px;
- &__logo {
-  margin: 0px;
+ &__logo2 {
+  color: $whitecolor;
  }
- &__title {
+ &__logo {
+  color: $bluecolor;
+  text-decoration: none;
   font-family: "Raleway";
   font-style: normal;
-  line-height: 31px;
-  font-size: 26px;
-  text-decoration: none;
-  color: $bluecolor;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.03em;
  }
- &__title2 {
-  color: $whitecolor;
+ @media screen and (max-width: 1199px) {
+  &__logo {
+   font-size: 24px;
+   line-height: 1.17;
+   letter-spacing: 0.03em;
+  }
+ }
+ @media screen and (max-width: 767px) {
+  &__logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+ }
+ @media screen and (min-width: 768px) {
+  &__logo {
+   margin-left: 100px;
+  }
+ }
+ @media screen and (min-width: 1200px) {
+  &__logo {
+   margin-left: 0;
+  }
  }
 }
 .address {
- margin: 0px;
- padding: 0px;
- &__item {
-  font-weight: 400;
+ &__list {
+  margin-top: 20px;
+ }
+ @media screen and (max-width: 1199px) {
+  &__list {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   height: 79px;
+  }
+ }
+ @media screen and (min-width: 768px) {
+  &__list {
+   margin-left: 61px;
+  }
+ }
+ @media screen and (min-width: 1200px) {
+  &__list {
+   margin-left: 0px;
+   width: 231px;
+  }
+ }
+
+ @media screen and (max-width: 1199px) {
+  &__item:not(:last-child) {
+   margin-bottom: 8px;
+  }
+ }
+ @media screen and (min-width: 1200px) {
+  &__item:not(:last-child) {
+   margin-bottom: 9px;
+  }
+ }
+ &__contacts {
   font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   font-style: normal;
-  line-height: 16px;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
   transition: color $defaultTransition;
+  text-decoration: none;
  }
- &__item:hover {
+ &__contacts:focus,
+ &__contacts:hover {
   color: $bluecolor;
-  cursor: pointer;
+ }
+
+ &__location {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  color: $whitecolor;
+  transition: color $defaultTransition;
+  text-decoration: none;
+ }
+ &__location:focus,
+ &__location:hover {
+  color: $bluecolor;
  }
 }
-.svg-footer {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+
+@media screen and (max-width: 767px) {
+ .footer-box {
+  margin-top: 60px;
+ }
+}
+@media screen and (min-width: 768px) {
+ .footer-box {
+  display: inline-block;
+  margin-left: 165px;
+ }
+}
+@media screen and (min-width: 1200px) {
+ .footer-box {
+  display: block;
+  margin-left: 70px;
+  margin-top: 15px;
+ }
+}
+.footer-box {
  &__title {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $whitecolor;
-  margin-top: 0px;
-  padding-right: 80px;
+  margin-bottom: 20px;
  }
-}
-.footer-list {
- display: flex;
- gap: 10px;
- margin-top: 0px;
-
- &__item {
+ @media screen and (max-width: 1199px) {
+  &__title {
+   display: flex;
+   justify-content: center;
+  }
+ }
+ &__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: $whitecolor;
+  gap: 10px;
+ }
+ @media screen and (max-width: 767px) {
+  &__list {
+   align-items: center;
+   justify-content: center;
+  }
+ }
+
+ &__link {
   width: 44px;
   height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition-property: background-color $defaultTransition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color $defaultTransition;
  }
- &__item:hover {
-  cursor: pointer;
+ &__link:focus,
+ &__link:hover {
   background-color: $bluecolor;
  }
+
+ &__icon {
+  fill: $whitecolor;
+ }
 }
-.formular-footer {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- margin-top: -35px;
+
+@media screen and (max-width: 1199px) {
+ .footer-form {
+  margin-top: 60px;
+ }
+}
+
+@media screen and (min-width: 768px) {
+ .footer-form {
+  display: flex;
+  justify-content: center;
+ }
+}
+@media screen and (min-width: 1200px) {
+ .footer-form__label {
+  margin-left: 93px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+ }
+}
+.footer-form {
+ &__title {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $whitecolor;
+ }
+ @media screen and (max-width: 1199px) {
+  &__title {
+   display: flex;
+   align-content: center;
+   justify-content: center;
+  }
+ }
 
  &__input {
-  box-sizing: border-box;
-  width: 358px;
   height: 50px;
+  padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  background-color: $backgroundGrey;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  padding-left: 16px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin-top: 20px;
   color: rgba(255, 255, 255, 0.6);
   transition: border $defaultTransition;
  }
  &__input:hover,
  &__input:focus {
-  border: 2px solid $bluesecond;
+  border: 2px solid $bluecolor;
+ }
+ @media screen and (max-width: 767px) {
+  &__input {
+   width: 100%;
+  }
+ }
+ @media screen and (min-width: 768px) {
+  &__input {
+   width: 450px;
+  }
+ }
+ @media screen and (min-width: 1200px) {
+  &__input {
+   width: 358px;
+  }
  }
  &__button {
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $whitecolor;
   width: 200px;
   height: 50px;
-  margin-left: 0px;
-  background: $bluesecond;
+  background: $bluecolor;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 16px;
-  line-height: 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: $whitecolor;
-  border: none;
+  border-color: transparent;
   transition: background $defaultTransition;
+ }
+ @media screen and (max-width: 1199px) {
+  &__button {
+   margin: 20px auto 0px;
+  }
+ }
+ @media screen and (min-width: 1200px) {
+  &__button {
+   margin-top: 48px;
+   margin-left: 12px;
+  }
  }
  &__button:hover,
  &__button:focus {
   background: $bluesecond;
  }
+
  &__svg {
-  padding-left: 25px;
-  align-items: center;
-  justify-content: center;
- }
- &__subscribe {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  margin-left: 10px;
   color: $whitecolor;
-  padding-right: 69px;
  }
 }

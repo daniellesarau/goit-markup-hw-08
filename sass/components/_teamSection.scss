@@ -1,40 +1,53 @@
 @import "../utils/vars";
-.container-team {
- box-sizing: border-box;
- width: 100%;
- padding: 94px 0px;
- background-color: $whitegreycolor;
+
+.section-team {
+ background: $whitegreycolor;
+ padding-top: 60px;
+ padding-bottom: 60px;
 }
-.team {
- &__title {
-  text-align: center;
+.title-team {
+ font-weight: 700;
+ font-size: 28px;
+ line-height: 33px;
+ text-align: center;
+ letter-spacing: 0.03em;
+ color: $blackcolor;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-bottom: 30px;
+ @media screen and (min-width: 1200px) {
+  padding-bottom: 50px;
   font-size: 36px;
   line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: &black;
-  margin: 0px 0px 50px 0px;
+ }
+}
+.team {
+ &__img {
+  width: 100%;
  }
  &__list {
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
- }
- &__item {
-  box-sizing: border-box;
-  width: 270px;
-  height: 428px;
-  left: 215px;
-  top: 1635px;
-  background: $whitecolor;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  margin-bottom: -30px;
+
+  @media screen and (min-width: 768px) {
+   display: flex;
+   flex-wrap: wrap;
+  }
  }
 
+ &__item {
+  background: #ffffff;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+   width: calc(100% / 2 - 30px);
+   margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+   width: calc(100% / 4 - 30px);
+  }
+ }
  &__name {
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -42,7 +55,6 @@
   letter-spacing: 0.03em;
   color: $blackcolor;
  }
-
  &__job {
   font-weight: 400;
   font-size: 16px;
@@ -50,12 +62,15 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $greycolor;
+  padding-bottom: 16px;
  }
 }
-
 .social-media {
  display: flex;
- padding-top: 16px;
+ margin-top: -35px;
+ justify-content: center;
+ align-items: center;
+
  &__item {
   display: flex;
   width: 44px;
@@ -82,6 +97,8 @@
 .social-media ul {
  display: flex;
  gap: 10px;
+ align-items: center;
+ justify-content: center;
 }
 .social-media__item a {
  display: flex;
