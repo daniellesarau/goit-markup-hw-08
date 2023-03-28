@@ -1,6 +1,6 @@
 @import "../utils/vars";
 .container-main {
- background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundm480.jpg");
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/.//images/backgroundm480.jpg");
  padding-top: 0;
  padding-bottom: 0;
 
@@ -9,9 +9,10 @@
  background-position: center;
  height: 400px;
 }
+/*
 @media screen and (min-width: 768px) {
  .container-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundT768.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/////");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,7 +20,7 @@
 }
 @media screen and (min-width: 1200px) {
  .container-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundD1200.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images\backgroundD1200.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,21 +29,22 @@
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
  .container-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundM@2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images\backgroundM@2.jpg");
  }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
  .container-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundT@2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images\backgroundT@2.jpg");
  }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
  .container-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//images/backgroundD@2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images\backgroundD@2.jpg");
  }
 }
+*/
 .hero {
  box-sizing: border-box;
  width: 100%;
